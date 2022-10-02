@@ -1,0 +1,137 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    /* font-family: 'Fira sans',sans-serif; */
+}
+body{
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    background-size:100% 100%;
+}
+#quote {
+    background-color: black;
+}
+#quote h1 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(121, 234, 242);
+    margin-bottom: 0.5rem;
+}
+header{
+    /* top left padding  */
+    padding: 2rem 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+/* for todo list title */
+header h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgb(193, 58, 58);
+    margin-bottom: 1rem;
+}
+
+todo_form{
+    display: flex;
+}
+/* firstly remove all the stylling */
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+/* add custom styling */
+#todo_input{
+    flex:1 1 0%;
+    background-color: rgb(211, 236, 240);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: rgba(68, 74, 59, 0.938);
+    font-size: 1.25rem;
+    height: 2.3rem;
+
+}
+#todo_input::placeholder{
+    color: rgb(11, 11, 61);
+}
+
+#todo_button{
+    color: rgb(11, 83, 10);
+    font-size: 1.5rem;
+    background-color: rgb(152, 232, 152);
+    border-radius: 0.5rem;
+}
+#todo_button:hover{
+    opacity: 0.8;
+}
+
+#main{
+    flex:1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task_list{
+    padding: 3rem;
+}
+/* task */
+.task_list h2{
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: rgb(18, 95, 95);
+    margin-bottom: 1rem;
+}
+#todo_tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(152, 145, 145, 0.676);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+/* for longer text if get out from it */
+#todo_tasks .task .content{ 
+    flex: 1 1 0%;
+}
+#todo_tasks .task .content .todo_text{
+    color: rgb(27, 57, 178);
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+}
+#todo_tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.task .actions button:hover{
+    opacity: 0.8;
+}
+.task .actions .edit{
+    color: rgb(4, 106, 106);
+}
+.task .actions .complete{
+    color: rgba(90, 125, 34, 0.973);
+}
+.task .actions .delete{
+    color: crimson;
+}
+
+
